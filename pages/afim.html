@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Função Afim</title>
+  <link rel="shortcut icon" href="../src/images/percent-solid-full.svg" type="image/x-icon">
+
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/afim.css">
+
+  <script src="../scripts/main.js" defer></script>
+  <script src="../scripts/afim.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Multi-Calculadora</h1>
+    <p>Porcentagem, funções Afim e Quadrática</p>
+    <nav id="menu">
+      <ul id="lista-operacoes">
+        <li class="calc-item" id="por-cem"><a href="../pages/porcentagem.html">Porcentagem</a></li>
+        <li class="calc-item" id="fun-afim"><a href="#">Função Afim</a></li>
+        <li class="calc-item" id="fun-quad"><a href="../pages/quadratica.html">Função Quadrática</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="boas-vindas">
+       <div class="modo-afim">
+        <button id="estudo" class="estudos btn">Estudante</button>
+        <button id="pratico" class="praticidade btn">Apenas Calculo</button>
+      </div>
+    </section>
+
+    <section id="f-afim" class="container-calc">
+      <h2>Função Afim</h2>
+
+      <div class="entrada-valores">
+        <label for="a">Coeficiente angular</label>
+        <input type="number" name="a" id="a">
+        <label for="b">Coeficiente linear</label>
+        <input type="number" name="b" id="b">
+        <label for="resulta">Raiz da função</label>
+        <input type="text" name="resulta" id="resultaAfim">
+      </div>
+
+      <div class="btn-enviar">
+        <button class="enviar btn">Calcular Raiz</button>
+        <button class="apagar btn">Apagar tudo</button>
+      </div>
+
+      <div class="passo-a-passo invisivel">
+        <h3>Passo-a-Passo</h3>
+        <div class="passos-afim">
+          <p class="operacao">função completa: <span class="oper">2x + 20 = 0</span></p>
+          <p class="passo1">Uma função do <strong>primeiro grau ou Afim</strong> é uma regra matemática que relaciona duas variáveis de forma linear, seguindo a estrutura <strong>f(x) = ax + b</strong> onde <strong>a:</strong> coeficiente angular, valor que acompanha o x, determina a inclinação da reta, <strong>Não pode ser zero</strong>; e
+          <strong>b:</strong> coeficiente linear, é o valor fixo, o termo independente, que indica onde a reta corta o eixo y; nesse caso
+        <span class="elementos"></span></p>
+          
+          <div class="explicando invisivel">
+            <h4>Calculo</h4>
+          
+            <p class="passo2">Primeiro separa numeros, o que acompanha o x fica de um lado e o termo independe passa para o lado
+              do zero invertendo o sinal: <span class="troca-coef">ax = -b</span>
+            </p>
+          
+            <p class="passo3">Depois separa números e o x em lados opostos da igualdade, assim como o a está multiplicando o x ele
+              troca de lado dividindo o b: <span class="div-coef">x = -b/a</span>
+            </p>
+            <p class="passo4"> Após a divisão encontra-se o valor do x da função: <strong>X =</strong> <span
+                class="val-x">n</span>
+            </p>
+          
+            <h4>O gráfico da função</h4>
+          
+            <p class="passo5">Como: <span class="pos-graf">o a é negativo, a reta "desce"</span> e a reta corta o eixo Y no ponto
+              (0, <span class="eixo-0x"></span>); <strong>obs: (x, y)</strong>
+            </p>
+          
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+    <section id="btn-menu">
+      <a href="../index.html" id="voltar" class="btn">Voltar</a>
+    </section>
+  </main>
+  
+  <footer id="rodape">
+  <p>&copy; <span class="ano-atual">2025</span> Isaias Santo silva</p>
+  </footer>
+</body>
+</html>

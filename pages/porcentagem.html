@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porcentagem</title>
+  <link rel="shortcut icon" href="../src/images/percent-solid-full.svg" type="image/x-icon">
+
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/porcentagem.css">
+
+  <script src="../scripts/porcentagem.js" defer></script>
+  <script src="../scripts/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Multi-Calculadora</h1>
+    <p>Porcentagem, funções Afim e Quadrática</p>
+    <nav id="menu">
+      <ul id="lista-operacoes">
+        <li class="calc-item" id="por-cem"><a href="#">Porcentagem</a></li>
+        <li class="calc-item" id="fun-afim"><a href="../pages/afim.html">Função Afim</a></li>
+        <li class="calc-item" id="fun-quad"><a href="../pages/quadratica.html">Função Quadrática</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="boas-vindas">
+      <div class="modo-pct">
+        <button id="estudo" class="estudos btn">Estudante</button>
+        <button id="pratico" class="praticidade btn">Apenas Calculo</button>
+      </div>
+      </div>
+    </section>
+
+     <section id="porcento" class="container-calc porc">
+      <h2>Porcentagem</h2>
+    
+      <div class="entrada-valores">
+        <label for="por100">Quantos Porcento (%)</label>
+        <input type="number" name="por100" id="por100">
+        <label for="num-valor">De</label>
+        <input type="number" name="num-valor" id="num-valor">
+        <label for="resulta">Resultado</label>
+        <input type="text" name="resulta" id="resulta-pct">
+      </div>
+    
+      <div class="btn-enviar">
+        <button class="enviar btn">Calcular Porcentagem</button>
+        <button class="apagar btn">Apagar tudo</button>
+      </div>
+    
+      <div class="passo-a-passo invisivel">
+        <h3>Passo-a-Passo</h3>
+        <div class="passos-pct">
+          <p class="operacao">operação completa: <span class="oper">12 x 20 = 240</span></p>
+    
+          ​<p class="passo1">Primeiro, transformamos a porcentagem <span class="pctg">10%</span> em um número que possamos
+            usar no papel. Pode ser uma fração ou um decimal: <span class="conv">10/100 ou 0,1</span></p>
+          ​<div class="explicando invisivel">
+    
+            <h4>Resolução por decimal (O jeito rápido)</h4>
+    
+            <p class="passo2">
+              Para descobrir o valor, pegamos o <span class="total">total de 100</span> e multiplicamos pelo número decimal
+              <span class="decimal">0,1</span> (que representa os <span class="porctg">10%</span>). O cálculo fica assim:
+              <span class="mult">100 x 0,1 = 10</span>.
+              <br><strong>Dica:</strong> É como se você estivesse pegando uma fatia de <span class="fatia">0,1</span> de
+              cada unidade do total!
+            </p>
+    
+            ​<h4>Resolução Por Fração (O jeito de dividir o bolo)</h4>
+    
+            ​<p class="passo3.1">Escrevemos a porcentagem como uma parte de 100: <span class="mult-frac">10% é o mesmo que
+                10 pedaços de um total de 100</span>.
+            </p>
+            ​<p class="passo3.1">Para calcular, multiplicamos o número de cima (numerador) pelo nosso valor total: <span
+                class="mult-frac-passo">Fazemos 10 x 100, o que nos dá uma fração grandona: 1000/100</span>.
+            </p>
+            ​<p class="passo3.3">Agora, a parte final! Toda fração é uma divisão. Dividimos o de cima pelo de baixo para
+              achar a resposta: <span class="div-frac">1000 ÷ 100 = 10</span>.
+            </p>
+    
+            ​<h4>Simplificação (Facilitando sua vida)</h4>
+    
+            <p class="passo4">
+              Para facilitar, podemos "encolher" a fração dividindo o <span class="termo-c">numerador</span> e o <span
+                class="termo-b">denominador</span> pelo <span class="destaque-valor">mesmo número</span>.
+              No nosso caso, dividimos tudo por <span class="divisor">10</span>:
+              <span class="simples">10 / 100 => 1 / 10 (aqui o 10 foi o simplificador)</span>.
+              Com a fração menor, a conta final fica muito mais rápida de cabeça:
+              <span class="conta-simples">1/10 x 100 = 10</span>.
+              <br><strong>Pense assim:</strong> É muito mais fácil dividir por <span class="destaque-valor">10</span> do que
+              por <span class="destaque-valor">100</span>!
+            </p>
+    
+          </div>
+    
+        </div>
+    
+      </div>
+    </section>
+
+    <section id="btn-menu">
+      <a href="../index.html" id="voltar" class="btn">Voltar</a>
+    </section>
+  </main>
+  
+  <footer id="rodape">
+  <p>&copy; <span class="ano-atual">2025</span> Isaias Santo silva</p>
+  </footer>
+</body>
+</html>
