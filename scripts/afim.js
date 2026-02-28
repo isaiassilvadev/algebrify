@@ -12,11 +12,15 @@ const btnPratAfim = divsBotoesModoAfim.querySelector('#pratico')
 
 const btnDeVoltar = document.querySelector('#btn-menu')
 
+const todosInputsNumeroAfim = caixaFuncaoAfim.querySelectorAll("input[type='number']")
+
 let seuModo = ''
+
+const passoApassoAfim = caixaFuncaoAfim.querySelector('.passo-a-passo')
 
 //separando modos
 
-function noModoAtivo() {
+function noModoAtivoAfim() {
 
   const botoesCalculo = document.querySelectorAll('button.enviar')
 
@@ -28,12 +32,10 @@ function noModoAtivo() {
 
 }
 
-function noModoPassivo() {
+function noModoPassivoAfim() {
   const botoesCalculo = document.querySelectorAll('button.enviar')
 
-  botoesCalculo.forEach( (el) => {
-    el.classList.add('invisivel')
-  })
+  passoApassoAfim.classList.add('invisivel')
 
   btnCalcAf.classList.add('invisivel')
   
@@ -41,29 +43,28 @@ function noModoPassivo() {
 
 
 //Modo de uso
-function modoUsoEstudo() {
+function modoUsoEstudoAfim() {
     modoAtual = 'estudante'
 
-    noModoAtivo()
+    noModoAtivoAfim()
 
 
-  passoAPasso.forEach( (el) => {
-    el.classList.remove('invisivel')
-  })
+  passoApassoAfim.classList.remove('invisivel')
+
 
 }
 
-function modoUsoPratico() {
+function modoUsoPraticoAfim() {
     modo = 'pratico'
-    noModoPassivo()
+    noModoPassivoAfim()
 
    
-  passoAPasso.forEach( (el) => {
-    el.classList.add('invisivel')
-  })
+    passoApassoAfim.classList.add('invisivel')
 
-  todoInputsNumero.forEach( (el) => {
-    el.addEventListener('input', realizarCalculo)
+  todosInputsNumeroAfim.forEach( (el) => {
+    el.removeEventListener('input', calcularAfim)
+
+    el.addEventListener('input',calcularAfim)
 
   })
 }
@@ -83,14 +84,6 @@ function alerta(span) {
   
 }
 
-//calculo automatico
-function realizarCalculo() {
-
-  if(!caixaFuncaoAfim.classList.contains('invisivel')) {
-    calcularAfim()
-  }
-
-}
 
 //Função da função Afim
 function calculoAfim(lin, tmInd) {
@@ -128,7 +121,7 @@ function preechendoFormula() {
     const spanOpAf = caixaFuncaoAfim.querySelector('.oper')
     
 
-    if (b == '') {
+    if (termoIndpB.value == '') {
       b = null
     }
 
@@ -183,7 +176,7 @@ function graficoPrimeiroGrau() {
 //Função preechimento automático
 
 function calcularAfim() {
-  if (modoAtual !== 'pratico') return
+  if (seuModo !== 'pratico') return
 
   const a = Number(coeficienteA.value)
   const b = Number(termoIndpB.value)
@@ -258,10 +251,10 @@ btnApagarAfim.addEventListener('click',() =>{
 //Eventos modos de uso
 btnEstudoAfim.addEventListener('click', () => {
   seuModo = 'estudando'
-  modoUsoEstudo()
+  modoUsoEstudoAfim()
 })
 
 btnPratAfim.addEventListener('click', () => {
   seuModo = 'pratico'
-  modoUsoPratico()
+  modoUsoPraticoAfim()
 })

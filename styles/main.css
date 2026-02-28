@@ -1,3 +1,39 @@
+:root {
+  --light: #eef4ed;
+  --laranja: #ffad05;
+  --azul-destaque: #20a4f3;
+  --dark: #2e1f27;
+  --azul-princ: #004e98;
+}
+
+.infos {
+  background-color: #cdcfcd;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: .5em;
+  gap: 10px;
+}
+
+.infos p {
+  padding: 15px 5px;
+  text-align: center;
+}
+
+.infos p:hover {
+  cursor: pointer;
+}
+
+.estudo:hover {
+  color: var(--light);
+  background-color: var(--laranja);
+}
+
+.calculadora:hover {
+  color: var(--light);
+  background-color: var(--laranja);
+}
+
 #rodape-main {
   position: fixed;
   bottom: 0;

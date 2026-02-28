@@ -13,17 +13,21 @@ const btnPratPorc = divBotoesModo.querySelector('#pratico')
 
 const botaoVoltar = document.querySelector('#btn-menu')
 
+const todosInputsNumeroPorc = caixaPorcento.querySelectorAll("input[type='number']")
+
 let modoUso = ''
+
+const passoApassoPorc = caixaPorcento.querySelector('.passo-a-passo')
 
 //separando modos
 
-function noModoAtivo() {
+function noModoAtivoPorc() {
 
   btnCalcPc.classList.remove('invisivel')
 
 }
 
-function noModoPassivo() {
+function noModoPassivoPorc() {
 
   btnCalcPc.classList.add('invisivel')
  
@@ -31,27 +35,28 @@ function noModoPassivo() {
 
 
 //Modo de uso
-function modoUsoEstudo() {
+function modoUsoEstudoPorc() {
     modoUso = 'estudante'
 
-    noModoAtivo()
+    noModoAtivoPorc()
 
-  passoAPasso.forEach( (el) => {
-    el.classList.remove('invisivel')
-  })
+    passoApassoPorc.classList.remove('invisivel')
+
 
 }
 
-function modoUsoPratico() {
+function modoUsoPraticoPorc() {
     modoUso = 'pratico'
-    noModoPassivo()
+    noModoPassivoPorc()
    
-  passoAPasso.forEach( (el) => {
-    el.classList.add('invisivel')
-  })
 
-  todoInputsNumero.forEach( (el) => {
-    el.addEventListener('input', realizarCalculo)
+    passoApassoPorc.classList.add('invisivel')
+
+
+  todosInputsNumeroPorc.forEach( (el) => {
+    el.removeEventListener('input', calculoPorCentagem)
+
+    el.addEventListener('input', calculoPorCentagem)
 
   })
 }
@@ -283,7 +288,7 @@ function realizarCalculo() {
 //Função preechimento automático
 function calculoPorCentagem() {
 
-  if (modoAtual !== 'pratico') return
+  if (modoUso !== 'pratico') return
 
   const porcento = Number(por100.value)
   const valor = Number(deValor.value)
@@ -334,11 +339,11 @@ btnApagarPorc.addEventListener('click',() =>{
 
 btnEstudoPorc.addEventListener('click', () => {
   modoUso = 'estudando'
-  modoUsoEstudo()
+  modoUsoEstudoPorc()
 
 })
 
 btnPratPorc.addEventListener('click', () => {
   modoUso = 'pratico'
-  modoUsoPratico()
+  modoUsoPraticoPorc()
 })
