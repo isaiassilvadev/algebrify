@@ -217,14 +217,33 @@ function realizarCalculoAfim() {
   }
 }
 
+function validarCamposAfim(...valores) {
+  for (let valor of valores) {
+    if (isNaN(valor)) {
+      return false;
+    }
+  }
+  return true;
+}
+
 //eventos Afim
 
-botaoAfim.addEventListener('click', () => {
-  caixaFuncaoAfim.classList.toggle('invisivel')
-  btnDeVoltar.classList.toggle('invisivel')
-})
+btnCalcAf.addEventListener('click', () => {
+  let a = Number(coeficienteA.value)
+  let b = Number(termoIndpB.value)
 
-btnCalcAf.addEventListener('click', realizarCalculoAfim)
+  if (!validarCamposAfim(a, b)) {
+    alert("Por favor, insira valores válidos para os coeficientes.");
+    return;
+  }
+
+  if (a === 0) {
+    alert("O valor de 'a' não pode ser 0.");
+    return;
+  }
+
+  realizarCalculoAfim()
+})
 
 
 //Botao apagar f-afim

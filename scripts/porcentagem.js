@@ -302,6 +302,7 @@ function calculoPorCentagem() {
 
 }
 
+
 //eventos porcentagem
 
 botaoPorCem.addEventListener('click', () => {
@@ -310,7 +311,24 @@ botaoPorCem.addEventListener('click', () => {
 
 })
 
-btnCalcPc.addEventListener('click', executarCalculoPorcentagem)
+btnCalcPc.addEventListener('click', () => {
+  let parteDeCem = Number(por100.value) 
+  let todo = Number(deValor.value) 
+
+
+  if (todo <= 0) {
+    alert('O valor total deve ser maior que zero')
+    return
+  }
+
+  if (parteDeCem < 0 ) {
+    alert('O valor da porcentagem não pode ser negativo')
+    return
+  }
+
+  executarCalculoPorcentagem() 
+
+})
 
 //Botao apagar porc
 const btnApagarPorc = caixaPorcento.querySelector('.apagar')
