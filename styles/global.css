@@ -85,6 +85,7 @@ main a {
   display: flex;
   flex-direction: column;
   margin: 0 20px 0 20px;
+  width: 80%;
   max-width: 480px;
   background-color: var(--azul-destaque);
   color: var(--dark);
@@ -96,7 +97,7 @@ main a {
 
 .entrada-valores {
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: minmax(0.5fr, 150px) 1fr;
   margin-bottom: 10px;
   gap: 10px;
   padding: 10px;
@@ -116,6 +117,7 @@ main a {
   background-color: #ffc44d8f;
   color: #fff;
   font-size: 1.2em;
+  width: 90%;
 }
 
 .container-calc input:focus {
@@ -140,15 +142,15 @@ main a {
   gap: 10px;
   justify-items: center;
   align-items: center;
-  padding: 6px 0 12px 0;
+  padding: 6px 4px 16px 4px;
 }
 
 .enviar {
-  columns: 1;
+  columns: 2;
 }
 
 .apagar {
-  columns: 2;
+  columns: 3;
 }
 
 .btn {
@@ -159,13 +161,13 @@ main a {
   border: none;
   font-size: 1.2em;
   height: 64px;
-  width: 150px;
+  min-width: 100px;
   border-radius: .5em;
   transition: all ease .2s;
 }
 
 .btn:hover {
-  transform: scale(1.25) translate(6px, 5px);
+  transform: scale(1.15) translate(6px, 5px);
 }
 
 a#voltar {
