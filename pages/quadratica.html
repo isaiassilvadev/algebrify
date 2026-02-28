@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Função Quadrática</title>
+  <link rel="shortcut icon" href="../src/images/percent-solid-full.svg" type="image/x-icon">
+
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/quadratica.css">
+
+  <script src="../scripts/main.js" defer></script>
+  <script src="../scripts/quadrada.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Multi-Calculadora</h1>
+    <p>Porcentagem, funções Afim e Quadrática</p>
+    <nav id="menu">
+      <ul id="lista-operacoes">
+        <li class="calc-item" id="por-cem"><a href="../pages/porcentagem.html">Porcentagem</a></li>
+        <li class="calc-item" id="fun-afim"><a href="../pages/afim.html">Função Afim</a></li>
+        <li class="calc-item" id="fun-quad"><a href="#">Função Quadrática</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="boas-vindas">
+      <div class="modo-quad">
+        <button id="estudo" class="estudos btn">Estudante</button>
+        <button id="pratico" class="praticidade btn">Apenas Calculo</button>
+      </div>
+    </section>
+
+    <section id="f-quadrada" class=" container-calc">
+      <h2>Função Quadrática</h2>
+
+      <div class="entrada-valores">
+        <label for="coef-ang">Coeficiente Angular</label>
+        <input type="number" name="coef-ang" id="coef-ang">
+        <label for="coef-lin">Coeficiente linear</label>
+        <input type="number" name="coef-lin" id="coef-lin">
+        <label for="c">Termo independente</label>
+        <input type="number" name="c" id="c">
+        <label for="resulta">Raizes da função</label>
+        <input type="text" name="resulta" id="resulta-quad">
+        <label for="resulta-raiz" id="result-raiz" class="invisivel">Raizes da função Simplificada</label>
+        <input type="text" name="resulta-raiz" id="resulta-quad-com-raiz" class="invisivel">
+      </div>
+
+      <div class="btn-enviar">
+        <button class="enviar btn">Calcular as Raizes</button>
+        <button class="apagar btn">Apagar tudo</button>
+      </div>
+
+      <div class="passo-a-passo invisivel">
+        <h3>Passo-a-Passo</h3>
+        <div class="passos-quadrado">
+          <p class="operacao">função completa: <span class="oper">2x² + 3x + 10 = 0</span></p>
+
+          <p class="passo1">
+            Uma função do <strong>Segundo Grau ou Quadrática</strong> cria um desenho chamado parábola (parece um "U" ou
+            um "U" de cabeça para baixo). Ela segue a regra <span class="formula">f(x) = ax² + bx + c</span>, onde:
+
+            <strong><span class="a-color">a</span>:</strong> Define a curva. Se for <strong>positivo</strong>, a
+            parábola tem um <span class="feliz">sorriso feliz (para cima)</span>; se for <strong>negativo</strong>, um
+            <span class="triste">sorriso triste (para baixo)</span>. (O "a" nunca pode ser zero).
+
+            <strong><span class="b-color">b</span>:</strong> É o valor que acompanha o x.
+
+            <strong><span class="c-color">c</span>:</strong> É o termo solitário. Ele é o ponto exato onde a curva
+            "fura" a linha vertical (eixo Y).
+
+            Nesse caso: <span id="elementos"></span>
+          </p>
+          
+          <div id="explicacaoDelta" class="invisivel">
+            <h4>Fórmula de Bhaskara</h4>
+            <p id="formulaBhaskara"></p>
+          
+            <h4>Cálculo do Delta (Δ)</h4>
+            <p id="calcDelta"></p>
+          
+            <h4>Raiz do Delta (√Δ)</h4>
+            <p id="raizDelta"></p>
+          
+            <h4>Raízes (X)</h4>
+            <p id="calcX1"></p>
+            <p id="calcX2"></p>
+          
+            <h4>Resultado Aproximado</h4>
+            <h5>Calculo Delta</h5>
+            <p id="deltaAprox"></p>
+            <p id="subDelta"></p>
+            <h5>Raiz do Delta</h5>
+            <p id="raizDeltaAprox"></p>
+            <h5>Raízes Simplificadas</h5>
+            <p id="raizes"></p>
+
+            <h4>O desenho no gráfico</h4>
+
+            <p id="grafico-funcao">
+            </p>
+          </div>
+          
+          </div>
+      </div>
+
+    </section>
+
+    <section id="btn-menu">
+      <a href="../index.html" id="voltar" class="btn">Voltar</a>
+    </section>
+  </main>
+
+  <footer id="rodape">
+  <p>&copy; <span class="ano-atual">2025</span> Isaias Santo silva</p>
+  </footer>
+</body>
+
+</html>
