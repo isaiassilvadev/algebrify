@@ -425,6 +425,117 @@ function graficoSegundoGrau(a, c) {
 
 }
 
+//Grafico
+function gradesGraficoQuad(cx, cy, esc) {
+  const caixaGraficoQd = document.querySelector('#grafico')
+  const canvasQd = document.getElementById('desenho');
+  const contx = canvasQd.getContext('2d');
+
+
+  const lmX = Math.ceil(canvasQd.width / (2 * esc))
+  const lmY = Math.ceil(canvasQd.height / (2 * esc))
+
+  contx.strokeStyle = "#ddd"
+  contx.lineWidth = 1
+
+  //linhas verticais
+  for (let i = -lmX; i <= lmX; i++) {
+    let xCanv = cx + i * esc
+
+    contx.beginPath()
+    contx.moveTo(xCanv, 0)
+    contx.lineTo(xCanv, canvasQd.height)
+    contx.stroke()
+  }
+
+  //linhas Horizintais
+  for (let j = -lmY; j <= lmY; j++) {
+    let yCanv = cy - j * esc
+
+    contx.beginPath()
+    contx.moveTo(0, yCanv)
+    contx.lineTo(canvasQd.width, yCanv)
+    contx.stroke()
+  }
+}
+
+function desenhaGraficoQuadrada(){
+  const canvasQd = document.getElementById('desenho');
+  const contx = canvasQd.getContext('2d');
+
+  const a = Number(cAngular.value)
+  const b = Number(cLinear.value)
+  const c = Number(termoIndpC.value)
+
+  const caixaGraf = document.querySelector('#grafico').classList.remove('invisivel')
+
+  const escalaGQ = 20
+  const centY = canvasQd.height / 2
+  const centX = canvasQd.width / 2
+
+  contx.clearRect(0, 0, canvasQd.width, canvasQd.height);
+
+  gradesGraficoQuad(centX, centY, escalaGQ)
+
+  contx.strokeStyle = "black"
+  contx.lineWidth = 2
+
+  //Eixo X
+  contx.beginPath()
+  contx.moveTo(0, centY)
+  contx.lineTo(canvasQd.width, centY)
+  contx.stroke()
+
+  //Eixo Y
+  contx.beginPath()
+  contx.moveTo(centX, 0)
+  contx.lineTo(centX, canvasQd.height)
+  contx.stroke()
+
+   //Numeros X
+
+  const limX = Math.floor(canvasQd.width / (2 * escalaGQ))
+  
+  for (let i = -limX; i <= limX; i++) {
+    contx.fillText(i, centX + i * escalaGQ - 5, centY + 15)
+  }
+
+  //Numeros Y
+
+  const limY = Math.floor(canvasQd.height / (2 * escalaGQ))
+
+  for (let i = -limY; i <= limY; i++) {
+    contx.fillText(i, centX + 5, centY - i * escalaGQ + 4)
+  } 
+
+  contx.strokeStyle = "blue";
+  contx.lineWidth = 2
+
+  contx.beginPath()
+
+  for (let x = -limX; x <= limX; x += 0.1) {
+    let y = a * x * x + b * x + c
+    let xCanv = centX + x * escalaGQ
+    let yCanv = centY - y * escalaGQ
+    if (x === -limX) {
+      contx.moveTo(xCanv, yCanv)
+    } else {
+      contx.lineTo(xCanv, yCanv)
+    }
+  }
+
+  contx.stroke()
+
+  centralizarVizuGraficoQuad()
+}
+
+function centralizarVizuGraficoQuad() {
+  const caixaGraficoQd = document.querySelector('#grafico')
+
+  caixaGraficoQd.scrollLeft =  (caixaGraficoQd.scrollWidth - caixaGraficoQd.clientWidth) / 2;
+  caixaGraficoQd.scrollTop = (caixaGraficoQd.scrollHeight - caixaGraficoQd.clientHeight) / 2;
+}
+
 
 //Funções de execução ao clicar em calcular
 
@@ -456,6 +567,8 @@ BtnQuad.addEventListener("click",() => {
     }
 
     atualizarExplicacao(a, b, c);
+
+    desenhaGraficoQuadrada()
 
 
     const divExplicacao = caixaFuncaoQuadrada.querySelector('#explicacaoDelta')
