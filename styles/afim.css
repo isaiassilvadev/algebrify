@@ -1,0 +1,23 @@
+#f-afim {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 10px;
+}
+
+#grafico {
+  margin-top: 20px;
+  max-width: 80%;
+  width: 480px;;
+  height: 400px;
+  background-color: aliceblue;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+#desenho {
+  height: 1200px;
+  width: 800px;
+}
