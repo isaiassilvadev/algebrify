@@ -151,6 +151,12 @@ function calculoDasRaizes() {
       inputRaizesQuadradas.value = `${X1.toFixed(2)} e ${X2.toFixed(2)}`
     } else {
       document.getElementById("calcX2").textContent = "";
+
+      if (Number.isInteger(X1)) {
+         inputRaizesQuadradas.value = `${X1.toFixed(0)}`
+      } else {
+        inputRaizesQuadradas.value = `${X1.toFixed(2)}`
+      }
     }
 }
 
