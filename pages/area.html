@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Àrea Geométrica</title>
+  <link rel="shortcut icon" href="../src/images/percent-solid-full.svg" type="image/x-icon">
+
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/area.css">
+
+  <script src="../scripts/main.js" defer></script>
+  <script src="../scripts/area.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Multi-Calculadora</h1>
+    <p>Porcentagem, funções Afim e Quadrática</p>
+    <nav id="menu">
+      <ul id="lista-operacoes">
+        <li class="calc-item" id="por-cem"><a href="../pages/porcentagem.html">Porcentagem</a></li>
+        <li class="calc-item" id="fun-afim"><a href="../pages/afim.html">Função Afim</a></li>
+        <li class="calc-item" id="fun-quad"><a href="../pages/quadratica.html">Função Quadrática</a></li>
+        <li class="calc-item" id="area-geometrica"><a href="#">Calcular Área</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="boas-vindas">
+      <div class="modos-area">
+        <button id="estudo" class="estudos btn">Estudante</button>
+        <button id="pratico" class="praticidade btn">Apenas Calculo</button>
+      </div>
+      </div>
+    </section>
+
+    <section id="cont-area" class="container-calc areas">
+      <h2>Calcular Área Geografica</h2>
+
+      <div id="slc-fig" class="seleciona-figura">
+        <label for="figura">Escolha a figura</label>
+        <select name="figura" id="figura">
+          <option value="escolher-figura">Escolha uma figura</option>
+          <option value="quadrado">Quadrado</option>
+          <option value="retangulo">Retângulo</option>
+          <option value="triangulo">Triângulo</option>
+          <option value="circulo">Círculo</option>
+          <option value="trapezio">Trapézio</option>
+          <option value="losango">Losango</option>
+        </select>
+      </div>
+
+      <div class="entrada-valores-area">
+       
+      </div>
+
+      <div class="btn-enviar">
+        <button class="enviar btn" id="calcular">Calcular area</button>
+        <button id="apagar" class="apagar btn">Apagar tudo</button>
+      </div>
+
+      <div class="passo-a-passo invisivel">
+        <h3>Passo-a-Passo</h3>
+      
+        <div class="passos-area">
+          <p class="operacao">Calculo da área: <span class="oper"></span></p>
+
+          <p class="definicao4">
+            Calcular a área é medir o tamanho de uma superfície. Imagine que você quer cobrir o chão de uma sala com azulejos: a área indica quantos quadrados cabem dentro desse espaço. Enquanto o comprimento é apenas uma linha, a área mede o "preenchimento" da figura, e por isso o resultado é sempre dado em unidades quadradas (como cm² ou m²).
+          </p>
+      
+          <div id="paragrafos" class="invisivel">
+
+            <h4>Formula utilizada</h4>
+      
+            <p class="passo-1">1</p>
+      
+            <h4>Substituindo Valores</h4>
+      
+            <p class="passo-2">2</p>
+      
+            <h4 id="tit-resolvendo">Resolvendo</h4>
+      
+            <p class="passo-3">2</p>
+      
+            <h4 id="tit-resultado"></h4>
+      
+            <p class="passo-4">3</p>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <section id="btn-menu">
+      <a href="../index.html" id="voltar" class="btn">Voltar</a>
+    </section>
+  </main>
+
+  <footer id="rodape-main">
+  <p>&copy; <span class="ano-atual">xx</span> Isaias Santo silva</p>
+  </footer>
+</body>
+</html>

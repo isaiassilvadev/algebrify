@@ -1,0 +1,65 @@
+:root {
+  --light: #eef4ed;
+  --laranja: #ffad05;
+  --azul-destaque: #20a4f3;
+  --dark: #2e1f27;
+  --azul-princ: #004e98;
+}
+
+.seleciona-figura {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 10px;
+}
+
+.entrada-valores-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 10px;
+}
+
+.borda-area {
+  border: 1px solid var(--dark);
+  border-radius: .5em;
+}
+
+.seleciona-figura label {
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.label-valor {
+  columns: 1;
+  font-weight: 700;
+  color: var(--laranja);
+}
+
+.input-valor{
+  columns: -1;
+}
+
+select {
+  border: 1px solid var(--laranja);
+  background-color: var(--light);
+  color: var(--dark);
+  padding: 0.5rem;
+  border-radius: .5em;
+  font-weight: 700;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--azul-destaque);
+}
+
+select:hover {
+  cursor: pointer;
+}
