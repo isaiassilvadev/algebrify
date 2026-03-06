@@ -19,6 +19,25 @@ let modoUso = ''
 
 const passoApassoPorc = caixaPorcento.querySelector('.passo-a-passo')
 
+//Iniciar programa
+document.addEventListener('DOMContentLoaded', iniciarPaginaPorc)
+
+function iniciarPaginaPorc() {
+   const modoSalvoPorc = localStorage.getItem('modoPorc')
+
+   if (modoUso === '')modoUsoPraticoPorc()
+
+
+  if (modoSalvoPorc === 'estudante') {
+    modoUso = 'estudando'
+    modoUsoEstudoPorc()
+    
+  } else {
+    modoUso = 'pratico'
+    modoUsoPraticoPorc()
+  }
+}
+
 //separando modos
 
 function noModoAtivoPorc() {
@@ -357,11 +376,15 @@ btnApagarPorc.addEventListener('click',() =>{
 
 btnEstudoPorc.addEventListener('click', () => {
   modoUso = 'estudando'
+  localStorage.setItem('modoPorc', 'estudante')
+
   modoUsoEstudoPorc()
 
 })
 
 btnPratPorc.addEventListener('click', () => {
   modoUso = 'pratico'
+  localStorage.setItem('modoPorc', 'pratico')
+
   modoUsoPraticoPorc()
 })

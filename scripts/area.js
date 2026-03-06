@@ -18,6 +18,25 @@ const todosInputsNumeroArea = containerArea.querySelectorAll('input[type="number
 
 let modoDeUso = ''
 
+//iniciar programa
+document.addEventListener('DOMContentLoaded', iniciarPagina)
+
+function iniciarPagina() {
+   const modoSalvo = localStorage.getItem('modoArea')
+
+   if (modoDeUso === '')modoUsoPraticoArea()
+
+
+  if (modoSalvo === 'estudante') {
+    modoDeUso = 'estudante'
+    modoUsoEstudoArea()
+    
+  } else {
+    modoDeUso = 'pratico'
+    modoUsoPraticoArea()
+  }
+}
+
 //separando modos
 
 function noModoAtivoArea() {
@@ -197,22 +216,28 @@ function criarInputs(figura) {
     const base = Number(inputBase.value)
     const altura = Number(inputAltura?.value)
 
-    if (figura === 'circulo') {
+    if (figura === 'circulo' && inputBase.value !== '') {
+
       inputArea.value = (Math.PI * base * base).toFixed(2)
 
-    } else if (figura === 'quadrado') {
+    } else if (figura === 'quadrado' && inputBase.value !== '') {
+
       inputArea.value = base * base
 
-    } else if (figura === 'retangulo') {
+    } else if (figura === 'retangulo' && inputBase.value !== '' && inputAltura.value !== '') {
+
       inputArea.value = base * altura
 
-    } else if (figura === 'triangulo') {
+    } else if (figura === 'triangulo' && inputBase.value !== '' && inputAltura.value !== '') {
+
       inputArea.value = (base * altura) / 2
 
-    } else if (figura === 'losango') {
+    } else if (figura === 'losango' && inputBase.value !== '' && inputAltura.value !== '') {
+
       inputArea.value = (base * altura) / 2
 
-    } else if(figura === 'trapezio') {
+    } else if(figura === 'trapezio' && inputBase.value !== '' && inputAltura.value !== '' && inputBaseMaior.value !== '') {
+
       const base2 = Number(inputBaseMaior.value)
       
       inputArea.value = ((base + base2) * altura) / 2
@@ -496,12 +521,16 @@ btnApagar.addEventListener('click', () => {
 btnEstudoArea.addEventListener('click', () => {
   modoDeUso = 'estudante'
 
+  localStorage.setItem('modoArea', 'estudante')
+
   modoUsoEstudoArea()
 
 })
 
 btnPratArea.addEventListener('click', () => {
   modoDeUso = 'pratico'
+
+  localStorage.setItem('modoArea', 'pratico')
 
   modoUsoPraticoArea()
 

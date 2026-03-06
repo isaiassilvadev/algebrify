@@ -28,6 +28,11 @@ header {
   color: var(--laranja);
 }
 
+header a {
+  text-decoration: none;
+  color: var(--laranja);
+}
+
 #lista-operacoes {
   display: flex;
   list-style: none;

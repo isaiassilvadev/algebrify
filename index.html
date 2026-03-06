@@ -15,7 +15,7 @@
 </head>
 <body>
   <header>
-    <h1>Multi-Calculadora</h1>
+    <h1><a href="#">Multi-Calculadora</a></h1>
     <p>Porcentagem, funções Afim e Quadrática</p>
     <nav id="menu">
       <ul id="lista-operacoes">
@@ -28,6 +28,66 @@
   </header>
 
   <main>
+    <section class="tutorial" id="tutorial">
+      <div class="fechar" id="fechar">
+        <button class="oX" id="oX">X</button>
+      </div>
+      <h2>Como usar as Calculadoras</h2>
+      <div class="explicacao">
+        <h3>Escolha seu Estilo</h3>
+        <div class="bloco">
+          <img src="src/images/tutorial-img-2.jpg">
+          <p>No modo <strong>Estudante</strong> você recebe o resultado com os passos.</p>
+        </div>
+    
+        <div class="bloco">
+          <img src="src/images/tutorial-img-2.5.jpg">
+          <p>Ideal para quem quer entender a lógica matemática.</p>
+        </div>
+    
+      </div>
+      <div class="explicacao">
+        <h3>Exemplo no modo estudante</h3>
+    
+        <div class="bloco">
+          <img src="src/images/tutorial-img-6.25.jpg">
+          <p>Exemplo de resolução de equação do segundo grau usando Bhaskara.</p>
+        </div>
+    
+        <div class="bloco">
+          <img src="src/images/tutorial-img-6.5.jpg">
+          <p>Visualização das raízes da função no gráfico.</p>
+        </div>
+    
+      </div>
+      <div class="explicacao">
+        <h3>Modo Apenas Cálculo</h3>
+    
+        <div class="bloco">
+          <img src="src/images/tutorial-img-3.jpg">
+          <p>Digite os valores e o resultado aparece automaticamente.</p>
+        </div>
+    
+      </div>
+      <div class="explicacao">
+        <h3>Controle Total</h3>
+    
+        <div class="bloco">
+          <img src="src/images/tutorial-img-1.jpg">
+          <p>Use o botão <strong>Calcular</strong> para validar os dados manualmente.</p>
+        </div>
+    
+        <div class="bloco">
+          <p>O botão <strong>Apagar Tudo</strong> limpa todos os campos para iniciar um novo problema.</p>
+        </div>
+    
+      </div>
+      <div>
+        <input type="checkbox" name="mostrar" id="mostrar">
+        <label for="mostrar">Não mostrar tutorial novamente</label>
+      </div>
+    </section>
+
     <section id="boas-vindas">
       <h2>Matemática Rápida</h2>
       <p class="apresentacao">Resolva os seus problemas matmáticos num só lugar. Otimize calculos, domine conceitos matmáticos ou simplesmente explore.</p>
@@ -40,14 +100,17 @@
           <p class="calculadora">Modo <strong>"Apenas cálculo"</strong>, é o modo direto para resultados instântaneos em
             funções e porcentagens</p>
           <p class="modo-selecionado"></p>
+
         </div>
       
       </div>
     </section>
 
-    <section id="btn-menu" class="invisivel">
-      <a href="#" id="voltar" class="btn">Voltar</a>
+
+    <section id="btn-tutorial">
+      <a href="#" id="voltar" class="btn">Ver Tutorial</a>
     </section>
+
   </main>
 
   <footer id="rodape-main">

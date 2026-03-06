@@ -18,6 +18,25 @@ let seuModo = ''
 
 const passoApassoAfim = caixaFuncaoAfim.querySelector('.passo-a-passo')
 
+//iniciar programa
+document.addEventListener('DOMContentLoaded', iniciarPaginaAfim)
+
+function iniciarPaginaAfim() {
+   const modoSalvoAf = localStorage.getItem('modoAreaAf')
+
+   if (seuModo === '')   modoUsoPraticoAfim()
+
+
+  if (modoSalvoAf === 'estudante') {
+    seuModo = 'estudando'
+    modoUsoEstudoAfim()
+    
+  } else {
+    seuModo = 'pratico'
+    modoUsoPraticoAfim()
+  }
+}
+
 //separando modos
 
 function noModoAtivoAfim() {
@@ -395,10 +414,14 @@ btnApagarAfim.addEventListener('click',() =>{
 //Eventos modos de uso
 btnEstudoAfim.addEventListener('click', () => {
   seuModo = 'estudando'
+  localStorage.setItem('modoAreaAf' , 'estudante')
+
   modoUsoEstudoAfim()
 })
 
 btnPratAfim.addEventListener('click', () => {
   seuModo = 'pratico'
+  localStorage.setItem('modoAreaAf' , 'pratico')
+
   modoUsoPraticoAfim()
 })

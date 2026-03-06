@@ -38,3 +38,58 @@
   position: fixed;
   bottom: 0;
 }
+
+main {
+  position: relative;
+}
+
+.tutorial{
+  position: absolute;
+  background: var(--light);
+  z-index: 1000;
+  padding:15px;
+  border-radius:.5rem;
+  box-shadow:3px 2px 5px #2e1f27a9;
+  width: 90%;
+}
+
+.explicacao{
+  margin-top:20px;
+}
+
+.bloco{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:10px;
+  align-items:center;
+  margin-bottom:10px;
+}
+
+.bloco img{
+  width:100%;
+}
+
+.fechar {
+  text-align: right;
+  font-weight: 900;
+  padding: 5px;
+}
+
+.oX {
+  border-radius: .5rem;
+  border: 1px solid transparent;
+  padding: 5px;
+  transition: all ease .2s;
+}
+
+.oX:hover {
+  border-color: var(--laranja);
+  color: var(--laranja);
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+#btn-tutorial {
+  height: 100px;
+  margin-top: 30px;
+}

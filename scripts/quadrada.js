@@ -22,6 +22,26 @@ let modos = ''
 
 const passoApassoQuad = caixaFuncaoQuadrada.querySelector('.passo-a-passo')
 
+//Iniciar programa
+document.addEventListener('DOMContentLoaded', iniciarPaginaQuad)
+
+function iniciarPaginaQuad() {
+   const modoSalvoQuad = localStorage.getItem('modoQuad')
+
+   if (modos === '')modoUsoPraticoQuad()
+
+
+  if (modoSalvoQuad === 'estudante') {
+    modos = 'estudando'
+    modoUsoEstudoQuad()
+    
+  } else {
+    modos = 'pratico'
+    modoUsoPraticoQuad()
+  }
+}
+
+
 //separando modos
 
 function noModoAtivoQuad() {
@@ -609,11 +629,15 @@ btnApagarQuad.addEventListener('click',() =>{
 //Eventos modos de uso
 btnEstudoQuad.addEventListener('click', () => {
   modos = 'estudando'
+  localStorage.setItem('modoQuad', 'estudante')
+
   modoUsoEstudoQuad()
 
 })
 
 btnPratQuad.addEventListener('click', () => {
   modos = 'pratico'
+  localStorage.setItem('modoQuad', 'pratico')
+
   modoUsoPraticoQuad()
 })
