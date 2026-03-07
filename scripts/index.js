@@ -26,12 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     containerTutorial.classList.add('invisivel')
     overlay.classList.add('invisivel')
+    footerIndex.overlay.classList.remove('invisivel')
 
     checkTutorial.checked = true
   } else {
 
     containerTutorial.classList.remove('invisivel')
     overlay.classList.remove('invisivel')
+    footerIndex.overlay.classList.add('invisivel')
   }
 })
 
