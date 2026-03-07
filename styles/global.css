@@ -274,14 +274,6 @@ footer {
 
 @media (hover: hover) and (pointer: fine) {
 
-  #lista-operacoes a:hover {
-  background-color: var(--laranja);
-  color: var(--light);
-  font-weight: 700;
-  cursor: pointer;
-  transform: translate(5px, 2px);
- }
-
   .btn:hover {
    transform: scale(1.15) translate(6px, 5px);
   }

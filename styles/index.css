@@ -121,6 +121,11 @@ main {
   background-color: #2e1f27d2;
 }
 
+.estudo:hover {
+  color: var(--light);
+  background-color: var(--laranja);
+}
+
 @media (hover: hover) and (pointer: fine) {
   .oX:hover {
    border-color: var(--laranja);
@@ -132,11 +137,6 @@ main {
   #btn-tutorial:hover {
    background-color: var(--laranja);
  }
-
- .estudo:hover {
-  color: var(--light);
-  background-color: var(--laranja);
-  }
 
 .calculadora:hover {
   color: var(--light);
