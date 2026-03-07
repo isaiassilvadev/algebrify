@@ -39,6 +39,16 @@ main {
   margin: 0 12px 0 12px;
 }
 
+.modo {
+  border: 1px solid rgba(
+    0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.modo p {
+  line-height: 1.6;
+}
+
 .infos {
   background-color: #cdcfcd;
   padding: 10px 20px;
@@ -51,20 +61,6 @@ main {
 .infos p {
   padding: 15px 5px;
   text-align: center;
-}
-
-.infos p:hover {
-  cursor: pointer;
-}
-
-.estudo:hover {
-  color: var(--light);
-  background-color: var(--laranja);
-}
-
-.calculadora:hover {
-  color: var(--light);
-  background-color: var(--laranja);
 }
 
 .tutorial{
@@ -135,5 +131,19 @@ main {
 
   #btn-tutorial:hover {
    background-color: var(--laranja);
+ }
+
+ .estudo:hover {
+  color: var(--light);
+  background-color: var(--laranja);
+  }
+
+.calculadora:hover {
+  color: var(--light);
+  background-color: var(--laranja);
+ }
+
+ .infos p:hover {
+  cursor: pointer;
  }
 }
