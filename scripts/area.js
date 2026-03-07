@@ -249,7 +249,7 @@ function criarInputs(figura) {
       inputBase.addEventListener('input', calcularAut)
       inputAltura.addEventListener('input', calcularAut)
 
-      const inputTrap = document.querySelector('.base-trapezio').value
+      const inputTrap = document.querySelector('.base-trapezio')
 
       inputTrap.addEventListener('input', calcularAut)
 

@@ -4,9 +4,9 @@ const rodape = document.querySelector('.ano-atual')
 
 rodape.textContent = new Date().getFullYear()
 
-const itensMenu = document.querySelectorAll('#lista-operacoes')
+const itensMenu = document.querySelector('#lista-operacoes')
 
-const containerTutotial = document.querySelector('#tutorial')
+const containerTutorial = document.querySelector('#tutorial')
 
 const botaofechar = document.querySelector('.oX')
 
@@ -16,33 +16,31 @@ const checkTutorial = document.querySelector('#mostrar')
 
 
 //Funcoes
-function fecharTutorial() {
-  const jaLeu = localStorage.getItem('leuTutorial')
 
-  if (jaLeu === 'sim') {
-    containerTutotial.classList.add('invisivel')
-  }
-}
 
 //Eventos
 botaofechar.addEventListener('click', () => {
 
-  containerTutotial.classList.add('invisivel')
+  containerTutorial.classList.add('invisivel')
 })
 
 document.addEventListener('DOMContentLoaded', () => {
   const jaLeu = localStorage.getItem('leuTutorial')
 
   if (jaLeu === 'sim') {
-    containerTutotial.classList.add('invisivel')
+
+    containerTutorial.classList.add('invisivel')
 
     checkTutorial.checked = true
+  } else {
+
+    containerTutorial.classList.remove('invisivel')
   }
 })
 
 btnVerTutorial.addEventListener('click', () => {
 
-  containerTutotial.classList.remove('invisivel')
+  containerTutorial.classList.remove('invisivel')
 })
 
 checkTutorial.addEventListener('change', () => {

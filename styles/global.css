@@ -50,14 +50,6 @@ header a {
   transition: all ease .3s;
 }
 
-#lista-operacoes a:hover {
-  background-color: var(--laranja);
-  color: var(--light);
-  font-weight: 700;
-  cursor: pointer;
-  transform: translate(5px, 2px);
-}
-
 main {
   margin-top: 1.6em;
   display: flex;
@@ -151,11 +143,11 @@ main a {
 }
 
 .enviar {
-  columns: 2;
+  grid-column: 1;
 }
 
 .apagar {
-  columns: 3;
+  grid-column: -1;
 }
 
 .btn {
@@ -171,19 +163,10 @@ main a {
   transition: all ease .2s;
 }
 
-.btn:hover {
-  transform: scale(1.15) translate(6px, 5px);
-}
 
 a#voltar {
   background-color: #2e1f2788;
   padding: 20px 30px 20px 30px;
-}
-
-a#voltar:hover {
-  background-color: var(--laranja);
-  font-size: 1.25em;
-  padding: 25px 35px 25px 35px;
 }
 
 .passo-a-passo {
@@ -241,4 +224,25 @@ footer {
 
 .explicando.invisivel {
   display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  #lista-operacoes a:hover {
+  background-color: var(--laranja);
+  color: var(--light);
+  font-weight: 700;
+  cursor: pointer;
+  transform: translate(5px, 2px);
+ }
+
+  .btn:hover {
+   transform: scale(1.15) translate(6px, 5px);
+  }
+
+  a#voltar:hover {
+  background-color: var(--laranja);
+  font-size: 1.25em;
+  padding: 25px 35px 25px 35px;
+  }
 }

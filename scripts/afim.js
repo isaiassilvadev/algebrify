@@ -236,7 +236,7 @@ function realizarCalculoAfim() {
   }
 }
 
-function gradesGraficoAfuim(cx, cy, escala) {
+function gradesGraficoAfim(cx, cy, escala) {
   const caixaGrafico = document.querySelector('#grafico')
   const canvas = document.getElementById('desenho');
   const ctx = canvas.getContext('2d');
@@ -289,7 +289,7 @@ function desenharGraficoAfim(a, b) {
   const centroY = canvas.height / 2
   const escala = 20
 
-  gradesGraficoAfuim(centroX, centroY, escala)
+  gradesGraficoAfim(centroX, centroY, escala)
 
   ctx.strokeStyle = "black"
   ctx.lineWidth = 2
