@@ -4,51 +4,24 @@ const rodape = document.querySelector('.ano-atual')
 
 rodape.textContent = new Date().getFullYear()
 
-const itensMenu = document.querySelector('#lista-operacoes')
+const containerMenu = document.querySelector('#menu')
 
-const containerTutorial = document.querySelector('#tutorial')
+const botaoMenuLateral = document.querySelector('#menu-btn')
 
-const botaofechar = document.querySelector('.oX')
-
-const btnVerTutorial = document.querySelector('#voltar')
-
-const checkTutorial = document.querySelector('#mostrar')
+const botaoFecharMenuLateral = document.querySelector('#btn-fecharMenu')
 
 
 //Funcoes
 
 
 //Eventos
-botaofechar.addEventListener('click', () => {
 
-  containerTutorial.classList.add('invisivel')
+botaoMenuLateral.addEventListener('click', () => {
+  containerMenu.classList.toggle('ativo')
 })
 
-document.addEventListener('DOMContentLoaded', () => {
-  const jaLeu = localStorage.getItem('leuTutorial')
-
-  if (jaLeu === 'sim') {
-
-    containerTutorial.classList.add('invisivel')
-
-    checkTutorial.checked = true
-  } else {
-
-    containerTutorial.classList.remove('invisivel')
-  }
-})
-
-btnVerTutorial.addEventListener('click', () => {
-
-  containerTutorial.classList.remove('invisivel')
-})
-
-checkTutorial.addEventListener('change', () => {
-  if (checkTutorial.checked) {
-    localStorage.setItem('leuTutorial' , 'sim')
-  } else {
-    localStorage.setItem('leuTutorial' , 'nao')
-  }
+botaoFecharMenuLateral.addEventListener('click', ()=> {
+  containerMenu.classList.remove('ativo')
 })
 //porcentagem
 

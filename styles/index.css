@@ -6,6 +6,30 @@
   --azul-princ: #004e98;
 }
 
+#boas-vindas {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 16px;
+  max-width: 400px;
+  padding: 10px 20px 0 10px;
+}
+
+#boas-vindas h2 {
+  margin: auto;
+  padding-top: 10px;
+}
+
+#boas-vindas p {
+  margin: auto;
+}
+
+
+#boas-vindas .btn {
+  margin: 0 12px 0 12px;
+}
+
 .infos {
   background-color: #cdcfcd;
   padding: 10px 20px;
@@ -36,7 +60,7 @@
 
 main {
   position: relative;
-  height: 100vh;
+  height: 100%;
 }
 
 .tutorial{
@@ -47,6 +71,14 @@ main {
   border-radius:.5rem;
   box-shadow:3px 2px 5px #2e1f27a9;
   width: 90%;
+  top: -10px;
+  opacity: 1;
+  transition: all .3s ease;
+}
+
+#tutorial.invisivel {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .explicacao{
@@ -75,17 +107,29 @@ main {
   border-radius: .5rem;
   border: 1px solid transparent;
   padding: 5px;
-  transition: all ease .2s;
+  transition: border .2s ease;
 }
 
-.oX:hover {
-  border-color: var(--laranja);
-  color: var(--laranja);
-  font-size: 1.5em;
-  cursor: pointer;
+#cont-btn-tutorial {
+  height: 50px;
+  margin-bottom: 40px;
 }
 
 #btn-tutorial {
-  height: 30px;
-  margin-top: 50px;
+  padding: 10px;
+  text-align: center;
+  background-color: #2e1f27d2;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .oX:hover {
+   border-color: var(--laranja);
+   color: var(--laranja);
+   font-size: 1.5em;
+   cursor: pointer;
+  }
+
+  #btn-tutorial:hover {
+   background-color: var(--laranja);
+ }
 }

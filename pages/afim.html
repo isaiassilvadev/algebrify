@@ -14,15 +14,22 @@
 </head>
 <body>
   <header>
-    <h1><a href="../index.html">Multi-Calculadora</a></h1>
+    <div class="topo">
+       <h1><a href="../index.html">Multi-Calculadora</a></h1>
+       <button id="menu-btn" aria-label="Abrir menu">
+        <span class="barra"></span>
+        <span class="barra"></span>
+        <span class="barra"></span>
+       </button>
+    </div>
+   
     <p>Porcentagem, funções Afim e Quadrática</p>
     <nav id="menu">
-      <ul id="lista-operacoes">
-        <li class="calc-item" id="por-cem"><a href="../pages/porcentagem.html">Porcentagem</a></li>
-        <li class="calc-item" id="fun-afim"><a href="#">Função Afim</a></li>
-        <li class="calc-item" id="fun-quad"><a href="../pages/quadratica.html">Função Quadrática</a></li>
-        <li class="calc-item" id="area-geometrica"><a href="../pages/area.html">Calcular Área</a></li>
-      </ul>
+        <button id="btn-fecharMenu" aria-label="Fechar o menu">&lt;</button>
+        <a href="pages/porcentagem.html" class="operacoes">Porcentagem</a>
+        <a href="#" class="operacoes">Função Afim</a>
+        <a href="pages/quadratica.html" class="operacoes">Função Quadrática</a>
+        <a href="pages/area.html" class="operacoes">Calcular Área</a>
     </nav>
   </header>
 
