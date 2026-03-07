@@ -4,11 +4,19 @@ const botaofechar = containerTutorial.querySelector('.oX')
 
 const btnVerTutorial = document.querySelector('#btn-tutorial')
 
+const footerIndex = document.querySelector('#rodape-main')
+
 const checkTutorial = containerTutorial.querySelector('#mostrar')
+
+const overlay = document.querySelector('#overlay')
 
 botaofechar.addEventListener('click', () => {
 
   containerTutorial.classList.add('invisivel')
+
+  overlay.classList.add('invisivel')
+
+  footerIndex.classList.remove('invisivel')
 })
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,17 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
   if (jaLeu === 'sim') {
 
     containerTutorial.classList.add('invisivel')
+    overlay.classList.add('invisivel')
 
     checkTutorial.checked = true
   } else {
 
     containerTutorial.classList.remove('invisivel')
+    overlay.classList.remove('invisivel')
   }
 })
 
 btnVerTutorial.addEventListener('click', () => {
 
   containerTutorial.classList.remove('invisivel')
+  overlay.classList.remove('invisivel')
+  footerIndex.classList.add('invisivel')
 })
 
 checkTutorial.addEventListener('change', () => {
