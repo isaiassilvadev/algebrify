@@ -1,10 +1,6 @@
-# algebrify
-versão: 1.0.0-beta
-# 📐 Calculadora de Equação do 2º Grau  
-## Versão 1.0.0
+# 📐 Algebrify
 
-# 📐 Calculadora Matemática  
-## Versão 1.0.0
+Aplicação web para realizar cálculos matemáticos fundamentais com explicações passo a passo e visualização gráfica.
 
 Aplicação web desenvolvida para realizar cálculos matemáticos fundamentais com exibição clara dos resultados e explicações passo a passo.
 
@@ -59,7 +55,29 @@ Aplicação web desenvolvida para realizar cálculos matemáticos fundamentais c
 
 ## 📂 Estrutura do Projeto
 
-📁 projeto │ ├── index.html │ ├── 📁 Pages │   ├── porcentagem.html │   ├── afim.html │   └── quadrada.html │ ├── 📁 Styles │   ├── global.css │   ├── porcentagem.css │   ├── afim.css │   └── quadrada.css │ ├── 📁 scripts │   ├── main.js │   ├── porcentagem.js │   ├── afim.js │   └── quadrada.js │ └── 📁 src └── 📁 images
+```
+📁 projeto
+ ├── index.html
+ ├── 📁 Pages
+ │   ├── porcentagem.html
+ │   ├── afim.html
+ │   └── quadrada.html
+ │
+ ├── 📁 Styles
+ │   ├── global.css
+ │   ├── porcentagem.css
+ │   ├── afim.css
+ │   └── quadrada.css
+ │
+ ├── 📁 scripts
+ │   ├── main.js
+ │   ├── porcentagem.js
+ │   ├── afim.js
+ │   └── quadrada.js
+ │
+ └── 📁 src
+     └── 📁 images
+```
 
 Novos arquivos foram adicionados para suportar as funcionalidades de **gráficos** e **cálculo de áreas geométricas**:
 
