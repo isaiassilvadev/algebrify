@@ -60,21 +60,20 @@ Aplicação web desenvolvida para realizar cálculos matemáticos fundamentais c
 - Separar responsabilidades (HTML, CSS e JS)
 - Criar base escalável para futuras versões
 
----
+## 🎯 Objetivo da Versão 1.1.0
 
-## 🔮 Melhorias Futuras
-
-- Implementar gráficos para função afim
-- Adicionar histórico de cálculos
-- Melhorar responsividade
-- Implementar modo escuro
-- Melhorar tratamento de erros
-
+- Expandir as funcionalidades matemáticas da aplicação
+- Adicionar visualização gráfica com **Canvas** para funções **afim** e **quadrática**
+- Implementar uma nova página dedicada ao **cálculo de áreas geométricas**
+- Incluir um **tutorial interativo com overlay** na página inicial
+- Manter a organização modular do projeto
+- Preservar a separação de responsabilidades (**HTML, CSS e JavaScript**)
+- Continuar estruturando uma base escalável para futuras versões
 ---
 
 ## 📌 Autor
 
-Desenvolvido por **Izzaias S. Silva**
+Desenvolvido por **Isaias S. Silva**
 
 ---
 
