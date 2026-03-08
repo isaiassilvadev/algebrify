@@ -12,15 +12,6 @@ Aplicação web desenvolvida para realizar cálculos matemáticos fundamentais c
 
 ## 🚀 Funcionalidades
 
-### 🧮 Equação do 2º Grau
-- Inserção dos coeficientes **a**, **b** e **c**
-- Cálculo automático do **Delta (Δ)**
-- Aplicação da fórmula de Bhaskara
-- Exibição das raízes (**x₁** e **x₂**)
-- Resolução detalhada
-
----
-
 ### 📊 Porcentagem
 - Cálculo de percentual de um valor
 - Aumento percentual
@@ -34,6 +25,25 @@ Aplicação web desenvolvida para realizar cálculos matemáticos fundamentais c
 - Cálculo do valor da função para um determinado **x**
 - Identificação do coeficiente angular (**a**) e linear (**b**)
 - Substituição demonstrada passo a passo
+- Visualização gráfica da função usando **Canvas**
+
+---
+
+### 📉 Função Quadrática (2º Grau)
+- Forma geral: `f(x) = ax² + bx + c`
+- Inserção dos coeficientes **a**, **b** e **c**
+- Cálculo automático do **Delta (Δ)**
+- Determinação das raízes da função
+- Visualização gráfica da parábola utilizando **Canvas**
+
+---
+
+### 🔺 Cálculo de Áreas Geométricas
+- Cálculo de área de figuras planas
+- Interface dedicada para inserção das medidas
+- Aplicação automática das fórmulas geométricas
+- Exibição do resultado da área calculada
+- Explicação da fórmula utilizada
 
 ---
 
