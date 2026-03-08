@@ -61,6 +61,24 @@ Aplicação web desenvolvida para realizar cálculos matemáticos fundamentais c
 
 📁 projeto │ ├── index.html │ ├── 📁 Pages │   ├── porcentagem.html │   ├── afim.html │   └── quadrada.html │ ├── 📁 Styles │   ├── global.css │   ├── porcentagem.css │   ├── afim.css │   └── quadrada.css │ ├── 📁 scripts │   ├── main.js │   ├── porcentagem.js │   ├── afim.js │   └── quadrada.js │ └── 📁 src └── 📁 images
 
+Novos arquivos foram adicionados para suportar as funcionalidades de **gráficos** e **cálculo de áreas geométricas**:
+
+/area
+ ├── area.html
+ ├── area.css
+ └── area.js
+
+/index
+ ├── index.js
+ └── index.css
+
+ - **area.html** → Interface para cálculo de áreas geométricas  
+- **area.css** → Estilização da página de áreas  
+- **area.js** → Lógica de cálculo das áreas e manipulação da interface  
+
+- **index.js** → Script da página inicial (incluindo controle do tutorial com overlay)  
+- **index.css** → Estilos da página inicial
+
 ---
 
 ## 🎯 Objetivo da Versão 1.0.0
