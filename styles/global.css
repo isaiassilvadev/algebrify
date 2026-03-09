@@ -170,7 +170,7 @@ main a {
 .container-calc label {
   grid-column: 1;
   align-self: center;
-  max-width: 150px;
+  max-width: 160px;
 }
 
 #btn-menu {
