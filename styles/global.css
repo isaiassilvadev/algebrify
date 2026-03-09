@@ -140,7 +140,7 @@ main a {
 
 .entrada-valores {
   display: grid;
-  grid-template-columns: minmax(0.5fr, 150px) 1fr;
+  grid-template-columns: auto 1fr;
   margin-bottom: 10px;
   gap: 10px;
   padding: 10px;
@@ -170,6 +170,7 @@ main a {
 .container-calc label {
   grid-column: 1;
   align-self: center;
+  max-width: 150px;
 }
 
 #btn-menu {
@@ -286,5 +287,11 @@ footer {
 
   #btn-fecharMenu:hover {
     transform: scale(1.25);
+  }
+}
+
+@media (max-width: 650px) {
+  .container-calc label {
+    max-width: 75px
   }
 }
