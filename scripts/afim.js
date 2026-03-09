@@ -24,7 +24,10 @@ document.addEventListener('DOMContentLoaded', iniciarPaginaAfim)
 function iniciarPaginaAfim() {
    const modoSalvoAf = localStorage.getItem('modoAreaAf')
 
-   if (seuModo === '')   modoUsoPraticoAfim()
+   if (seuModo === '')  {
+      seuModo = 'pratico'        
+      modoUsoPraticoAfim()
+   }
 
 
   if (modoSalvoAf === 'estudante') {
