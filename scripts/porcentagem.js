@@ -25,7 +25,10 @@ document.addEventListener('DOMContentLoaded', iniciarPaginaPorc)
 function iniciarPaginaPorc() {
    const modoSalvoPorc = localStorage.getItem('modoPorc')
 
-   if (modoUso === '')modoUsoPraticoPorc()
+   if (modoUso === '') {
+      modoUso = 'pratico'
+      modoUsoPraticoPorc()
+   }
 
 
   if (modoSalvoPorc === 'estudante') {
