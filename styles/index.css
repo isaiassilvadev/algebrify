@@ -95,7 +95,7 @@ main {
 
 .bloco{
   display:grid;
-  grid-template-columns:150px 1fr;
+  grid-template-columns: 1fr;
   gap:10px;
   align-items:center;
   margin-bottom:10px;
@@ -154,4 +154,11 @@ main {
  .infos p:hover {
   cursor: pointer;
  }
+}
+
+@media (min-width: 650px) {
+  .bloco {
+    display:grid;
+    grid-template-columns:150px 1fr;
+  }
 }
