@@ -156,7 +156,7 @@ main {
  }
 }
 
-@media (min-width: 650px) {
+@media (min-width: 680px) {
   .bloco {
     display:grid;
     grid-template-columns:150px 1fr;
