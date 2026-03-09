@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     containerTutorial.classList.remove('invisivel')
     overlay.classList.remove('invisivel')
-    footerIndex.overlay.classList.add('invisivel')
+    footerIndex.classList.add('invisivel')
   }
 })
 
