@@ -1,3 +1,17 @@
+.modo-afim {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.modo-afim #estudo {
+  grid-column: 1;
+}
+
+.modo-afim #pratico {
+  grid-column: 2;
+}
+
 #f-afim {
   display: flex;
   flex-direction: column;

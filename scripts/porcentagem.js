@@ -25,12 +25,6 @@ document.addEventListener('DOMContentLoaded', iniciarPaginaPorc)
 function iniciarPaginaPorc() {
    const modoSalvoPorc = localStorage.getItem('modoPorc')
 
-   if (modoUso === '') {
-      modoUso = 'pratico'
-      modoUsoPraticoPorc()
-   }
-
-
   if (modoSalvoPorc === 'estudante') {
     modoUso = 'estudando'
     modoUsoEstudoPorc()
@@ -326,13 +320,6 @@ function calculoPorCentagem() {
 
 
 //eventos porcentagem
-
-botaoPorCem.addEventListener('click', () => {
-  caixaPorcento.classList.toggle('invisivel')
-  botaoVoltar.classList.toggle('invisivel')
-
-})
-
 btnCalcPc.addEventListener('click', () => {
   let parteDeCem = Number(por100.value) 
   let todo = Number(deValor.value) 

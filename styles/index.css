@@ -29,7 +29,8 @@ main {
   flex-wrap: wrap;
   text-align: center;
   gap: 16px;
-  max-width: 400px;
+  max-width: 600px;
+  margin: auto;
   padding: 10px 20px 0 10px;
 }
 
@@ -129,7 +130,7 @@ main {
   background-color: #2e1f27d2;
 }
 
-.estudo:hover {
+.explicaModo:hover {
   color: var(--light);
   background-color: var(--laranja);
 }
@@ -151,12 +152,16 @@ main {
   background-color: var(--laranja);
  }
 
- .infos p:hover {
+ .infos .explicaModo:hover {
   cursor: pointer;
  }
 }
 
 @media (max-width: 660px) {
+  #boas-vindas {
+    max-width: 400px;
+  }
+
   .bloco {
     display:grid;
     grid-template-columns: 1fr;

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Algebrando</title>
+  <title>Algebrando | Calculadora Matemática Online</title>
   <link rel="shortcut icon" href="src/images/percent-solid-full.svg" type="image/x-icon">
 
   <link rel="stylesheet" href="styles/global.css">
@@ -14,24 +15,26 @@
   <script src="scripts/main.js" defer></script>
   <script src="scripts/index.js" defer></script>
 </head>
+
 <body>
   <header>
     <div class="topo">
-       <h1><a href="index.html">Algebrando</a></h1>
-       <button id="menu-btn" aria-label="Abrir menu">
+      <h1><a href="index.html">Algebrando</a></h1>
+      <button id="menu-btn" aria-label="Abrir menu">
         <span class="barra"></span>
         <span class="barra"></span>
         <span class="barra"></span>
-       </button>
+      </button>
     </div>
-   
-    <h2>Algebra passo a passo</h2>
+
+    <h2>Calculadora Matemática Online</h2>
+
     <nav id="menu">
-        <button id="btn-fecharMenu" aria-label="Fechar o menu">&lt;</button>
-        <a href="pages/porcentagem.html" class="operacoes">Porcentagem</a>
-        <a href="pages/afim.html" class="operacoes">Função Afim</a>
-        <a href="pages/quadratica.html" class="operacoes">Função Quadrática</a>
-        <a href="pages/area.html" class="operacoes">Calcular Área</a>
+      <button id="btn-fecharMenu" aria-label="Fechar o menu">&lt;</button>
+      <a href="pages/porcentagem.html" class="operacoes">Porcentagem</a>
+      <a href="pages/afim.html" class="operacoes">Função Afim</a>
+      <a href="pages/quadratica.html" class="operacoes">Função Quadrática</a>
+      <a href="pages/area.html" class="operacoes">Calcular Área</a>
     </nav>
   </header>
 
@@ -49,48 +52,48 @@
           <img src="src/images/tutorial-img-2.jpg">
           <p>No modo <strong>Estudante</strong> você recebe o resultado com os passos.</p>
         </div>
-    
+
         <div class="bloco">
           <img src="src/images/tutorial-img-2.5.jpg">
           <p>Ideal para quem quer entender a lógica matemática.</p>
         </div>
-    
+
       </div>
       <div class="explicacao">
         <h3>Exemplo no modo estudante</h3>
-    
+
         <div class="bloco">
           <img src="src/images/tutorial-img-6.25.jpg">
           <p>Exemplo de resolução de equação do segundo grau usando Bhaskara.</p>
         </div>
-    
+
         <div class="bloco">
           <img src="src/images/tutorial-img-6.5.jpg">
           <p>Visualização das raízes da função no gráfico.</p>
         </div>
-    
+
       </div>
       <div class="explicacao">
         <h3>Modo Apenas Cálculo</h3>
-    
+
         <div class="bloco">
           <img src="src/images/tutorial-img-3.jpg">
           <p>Digite os valores e o resultado aparece automaticamente.</p>
         </div>
-    
+
       </div>
       <div class="explicacao">
         <h3>Controle Total</h3>
-    
+
         <div class="bloco">
           <img src="src/images/tutorial-img-1.jpg">
           <p>Use o botão <strong>Calcular</strong> para validar os dados manualmente.</p>
         </div>
-    
+
         <div class="bloco">
           <p>O botão <strong>Apagar Tudo</strong> limpa todos os campos para iniciar um novo problema.</p>
         </div>
-    
+
       </div>
       <div>
         <input type="checkbox" name="mostrar" id="mostrar">
@@ -100,24 +103,30 @@
 
     <section id="boas-vindas">
       <h2>Matemática Rápida</h2>
-      <p class="apresentacao">Resolva os seus problemas matemáticos num só lugar. Otimize calculos, domine conceitos matmáticos ou simplesmente explore.</p>
+
+      <p class="apresentacao">
+        Resolva problemas de matemática em um só lugar. Otimize cálculos, pratique conceitos e explore ferramentas que tornam o aprendizado mais simples e acessível com a calculadora matemática online do Algebrando.
+      </p>
 
       <div class="modo">
-      
+
         <div class="infos">
-          <p>No Algebrando você pode resolver expressões e equações de forma simples. No modo apenas cálculo,
-            você recebe o resultado imediatamente. Basta digitar os valores e a calculadora faz o resto. 
-            Se quiser aprender o processo, ative o modo passo a passo e veja como cada etapa da solução é construída.
+          <p>
+            No <strong>Algebrando</strong>, você pode resolver expressões e equação de forma intuitiva, utilizando uma calculadora pensada tanto para quem precisa apenas do resultado quanto para quem deseja entender o processo. Nossa <strong>calculadora de equação</strong> permite que você escolha entre dois modos de uso, adaptando-se perfeitamente ao seu objetivo de estudo ou trabalho online:
           </p>
-          
-          <p class="estudo">Modo <strong>"Estudante"</strong> contem resoluções passo a passo que ensinam "porquê" de cada
-            etapa</p>
-          <p class="calculadora">Modo <strong>"Apenas cálculo"</strong>, é o modo direto para resultados instântaneos em
-            funções e porcentagens</p>
-          <p class="modo-selecionado"></p>
+
+          <p class="estudo explicaModo">
+            <strong>Modo Passo a Paso:</strong> Mostra a resolução passo a passo e detalha a lógica por trás de cada etapa da equação.
+          </p>
+
+          <p class="calculadora explicaModo">
+            <strong>Modo Cálculo Rápido:</strong> Fornece o resultado imediatamente após inserir os valores, ideal para conferir respostas rápidas.
+          </p>
+
+          <p>Além disso, oferecemos uma <strong>calculadora de porcentagem</strong> robusta para você descobrir aumentos, descontos e valores de porcentagem rapidamente, facilitando cálculos do dia a dia e exercícios financeiros.</p>
 
         </div>
-      
+
       </div>
     </section>
 
@@ -129,7 +138,8 @@
   </main>
 
   <footer id="rodape-main">
-  <p>&copy; <span class="ano-atual">xx</span> Isaias Santo silva</p>
+    <p>&copy; <span class="ano-atual">xx</span> Isaias Santo silva</p>
   </footer>
 </body>
+
 </html>

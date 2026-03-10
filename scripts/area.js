@@ -24,12 +24,6 @@ document.addEventListener('DOMContentLoaded', iniciarPagina)
 function iniciarPagina() {
    const modoSalvo = localStorage.getItem('modoArea')
 
-   if (modoDeUso === '') {
-        modoDeUso = 'pratico'
-        modoUsoPraticoArea()
-   }
-
-
   if (modoSalvo === 'estudante') {
     modoDeUso = 'estudante'
     modoUsoEstudoArea()

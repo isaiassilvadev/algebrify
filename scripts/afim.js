@@ -24,12 +24,6 @@ document.addEventListener('DOMContentLoaded', iniciarPaginaAfim)
 function iniciarPaginaAfim() {
    const modoSalvoAf = localStorage.getItem('modoAreaAf')
 
-   if (seuModo === '')  {
-      seuModo = 'pratico'        
-      modoUsoPraticoAfim()
-   }
-
-
   if (modoSalvoAf === 'estudante') {
     seuModo = 'estudando'
     modoUsoEstudoAfim()
@@ -38,6 +32,7 @@ function iniciarPaginaAfim() {
     seuModo = 'pratico'
     modoUsoPraticoAfim()
   }
+
 }
 
 //separando modos
@@ -66,7 +61,7 @@ function noModoPassivoAfim() {
 
 //Modo de uso
 function modoUsoEstudoAfim() {
-    modoAtual = 'estudante'
+    seuModo = 'estudante'
 
     noModoAtivoAfim()
 
@@ -77,7 +72,7 @@ function modoUsoEstudoAfim() {
 }
 
 function modoUsoPraticoAfim() {
-    modo = 'pratico'
+    seuModo = 'pratico'
     noModoPassivoAfim()
 
    

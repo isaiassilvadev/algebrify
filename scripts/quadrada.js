@@ -28,12 +28,6 @@ document.addEventListener('DOMContentLoaded', iniciarPaginaQuad)
 function iniciarPaginaQuad() {
    const modoSalvoQuad = localStorage.getItem('modoQuad')
 
-   if (modos === '') {
-      modos = 'pratico'
-      modoUsoPraticoQuad()
-   }
-
-
   if (modoSalvoQuad === 'estudante') {
     modos = 'estudando'
     modoUsoEstudoQuad()

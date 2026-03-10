@@ -1,0 +1,13 @@
+.modo-pct {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.modo-pct #estudo {
+  grid-column: 1;
+}
+
+.modo-pct #pratico {
+  grid-column: 2;
+}
