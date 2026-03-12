@@ -95,7 +95,7 @@ header a {
   width: 50px;
   position: absolute;
   right: -10px;
-  font-weight: 600;
+  font-weight: 800;
   font-size: 1.5em;
   color: var(--laranja);
   border: none;
@@ -191,6 +191,7 @@ main a {
   justify-items: center;
   align-items: center;
   padding: 6px 4px 16px 4px;
+  font-weight: 800;
 }
 
 .enviar {
@@ -212,6 +213,7 @@ main a {
   min-width: 100px;
   border-radius: .5em;
   transition: all ease .2s;
+  font-weight: 800;
 }
 
 
