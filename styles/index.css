@@ -89,6 +89,10 @@ main {
   transition: all .3s ease;
 }
 
+.tutorial h3 {
+  margin-bottom: 10px;
+}
+
 #tutorial.invisivel {
   opacity: 0;
   pointer-events: none;
