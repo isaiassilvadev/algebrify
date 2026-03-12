@@ -119,6 +119,10 @@ main {
   transition: border .2s ease;
 }
 
+.forte {
+  font-weight: 700;
+}
+
 #cont-btn-tutorial {
   height: 50px;
   margin-bottom: 40px;
