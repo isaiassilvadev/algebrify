@@ -12,6 +12,9 @@ const botaoFecharMenuLateral = document.querySelector('#btn-fecharMenu')
 
 
 //Eventos
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+}
 
 botaoMenuLateral.addEventListener('click', () => {
   containerMenu.classList.toggle('ativo')
