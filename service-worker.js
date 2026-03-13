@@ -1,18 +1,27 @@
-self.addEventListener('install', (event) => {
-  console.log('Service Worker instalado')
-})
-
-self.addEventListener('fetch', (event) => {
-  // intercepta requisições
-})
-
-const CACHE_NAME = "algebrando-cache-v1";
+const CACHE_NAME = "algebrando-v1";
 
 const arquivos = [
+
   "/",
   "/index.html",
+
+  "/Pages/afim.html",
+  "/Pages/porcentagem.html",
+  "/Pages/quadrada.html",
+  "/Pages/area.html",
+
   "/Styles/global.css",
-  "/scripts/main.js"
+  "/Styles/afim.css",
+  "/Styles/porcentagem.css",
+  "/Styles/quadrada.css",
+  "/Styles/area.css",
+
+  "/scripts/main.js",
+  "/scripts/afim.js",
+  "/scripts/porcentagem.js",
+  "/scripts/quadrada.js",
+  "/scripts/area.js"
+
 ];
 
 self.addEventListener("install", (event) => {
