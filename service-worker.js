@@ -1,33 +1,31 @@
 const CACHE_NAME = "algebrando-v1";
 
-const arquivos = [
-
+const urlsToCache = [
   "/",
   "/index.html",
 
   "/Pages/afim.html",
-  "/Pages/porcentagem.html",
   "/Pages/quadrada.html",
+  "/Pages/porcentagem.html",
   "/Pages/area.html",
 
   "/Styles/global.css",
   "/Styles/afim.css",
-  "/Styles/porcentagem.css",
   "/Styles/quadrada.css",
+  "/Styles/porcentagem.css",
   "/Styles/area.css",
 
   "/scripts/main.js",
   "/scripts/afim.js",
-  "/scripts/porcentagem.js",
   "/scripts/quadrada.js",
+  "/scripts/porcentagem.js",
   "/scripts/area.js"
-
 ];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(arquivos);
+      return cache.addAll(urlsToCache);
     })
   );
 });
