@@ -1,39 +1,23 @@
 const CACHE_NAME = "algebrando-v1";
 
-const urlsToCache = [
-  "/",
-  "/index.html",
+const arquivos = [
+  "/algebrify/",
+  "/algebrify/index.html",
 
-  "/Pages/afim.html",
-  "/Pages/quadrada.html",
-  "/Pages/porcentagem.html",
-  "/Pages/area.html",
+  "/algebrify/Pages/afim.html",
+  "/algebrify/Pages/quadrada.html",
+  "/algebrify/Pages/porcentagem.html",
+  "/algebrify/Pages/area.html",
 
-  "/Styles/global.css",
-  "/Styles/afim.css",
-  "/Styles/quadrada.css",
-  "/Styles/porcentagem.css",
-  "/Styles/area.css",
+  "/algebrify/Styles/global.css",
+  "/algebrify/Styles/afim.css",
+  "/algebrify/Styles/quadrada.css",
+  "/algebrify/Styles/porcentagem.css",
+  "/algebrify/Styles/area.css",
 
-  "/scripts/main.js",
-  "/scripts/afim.js",
-  "/scripts/quadrada.js",
-  "/scripts/porcentagem.js",
-  "/scripts/area.js"
+  "/algebrify/scripts/main.js",
+  "/algebrify/scripts/afim.js",
+  "/algebrify/scripts/quadrada.js",
+  "/algebrify/scripts/porcentagem.js",
+  "/algebrify/scripts/area.js"
 ];
-
-self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(urlsToCache);
-    })
-  );
-});
-
-self.addEventListener("fetch", (event) => {
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
-    })
-  );
-});
