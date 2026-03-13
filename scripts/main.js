@@ -12,11 +12,8 @@ const botaoFecharMenuLateral = document.querySelector('#btn-fecharMenu')
 
 
 //Eventos
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js')
-}
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/service-worker.js");
+  navigator.serviceWorker.register("/algebrify/service-worker.js");
 }
 
 botaoMenuLateral.addEventListener('click', () => {
