@@ -23,7 +23,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  padding: 5px;
+  padding: 3px;
   background-color: var(--azul-princ);
   color: var(--laranja);
 }
