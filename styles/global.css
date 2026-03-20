@@ -30,7 +30,7 @@ header {
 
 .topo {
   display: grid;
-  grid-template-columns: 1fr 200px 1fr;
+  grid-template-columns: 200px 1fr 1fr;
   width: 100%;
   height: 100px;
 }
@@ -77,7 +77,7 @@ header a {
   padding: 12px;
   gap: 10px;
   top: 0;
-  left: -250px;
+  right: -250px;
   width: 220px;
   font-weight: 600;
   background-color: var(--light);
@@ -94,7 +94,7 @@ header a {
   grid-column: 2;
   width: 50px;
   position: absolute;
-  right: -10px;
+  left: -10px;
   font-weight: 800;
   font-size: 1.5em;
   color: var(--laranja);
@@ -104,7 +104,7 @@ header a {
 }
 
 #menu.ativo {
-  left: 0;
+  right: 0;
 }
 
 main {
