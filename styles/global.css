@@ -30,9 +30,11 @@ header {
 
 .topo {
   display: grid;
-  grid-template-columns: 200px 1fr 1fr;
+  /* A coluna do meio (auto) cresce e as das pontas ficam com o tamanho do conteúdo */
+  grid-template-columns: auto 1fr auto; 
   width: 100%;
   height: 100px;
+  align-items: start; /* Alinha todos no topo por padrão */
 }
 
 .topo img {
@@ -41,23 +43,25 @@ header {
 
 .topo h1 {
   grid-column: 1;
-  justify-self: left;
-  align-self: start;
+  justify-self: start; /* Garante que encoste no início da trilha */
+  margin: 0; /* Remove margens padrão que podem deslocar o título */
 }
 
+
 #menu-btn {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end; /* Isso aqui é o segredo para colar na direita */
+  
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: 50px;
-  grid-column: -1;
-  grid-row: 1;
-  align-self: start;
-
+  width: auto; /* Deixe o botão respirar conforme as barras */
   background: none;
   border: none;
   cursor: pointer;
 }
+
 
 .barra {
   background-color: var(--laranja);
